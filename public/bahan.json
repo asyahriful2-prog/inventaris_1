@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "nama": "Asam Klorida",
+    "simbol": "HCl",
+    "jumlah": 10,
+    "is_expired": true,
+    "satuan": "liter",
+    "tanggal": "2025-08-24",
+    "lab": "Kimia",
+    "lokasi": "Lemari B, Rak 1"
+  },
+  {
+    "id": 2,
+    "nama": "Air Suling",
+    "simbol": "H₂O",
+    "jumlah": 1500,
+    "is_expired": false,
+    "satuan": "ml",
+    "tanggal": "2025-08-20",
+    "lab": "Kimia",
+    "lokasi": "Meja Laboran"
+  }
+]

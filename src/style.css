@@ -1,0 +1,271 @@
+/* Reset & Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f9;
+  color: #111;
+}
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+/* Layout */
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+.sidebar {
+  width: 220px;
+  background-color: #1f2937;
+  color: white;
+  padding: 20px;
+}
+.sidebar h2 {
+  font-size: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.sidebar ul {
+  list-style: none;
+}
+.sidebar ul li {
+  padding: 12px 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.sidebar ul li:hover,
+.sidebar ul li.active {
+  background-color: #374151;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+header h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Dashboard Cards & Chart */
+.dashboard .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.card {
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+}
+.card h3 {
+  margin-bottom: 10px;
+}
+.card.blue {
+  background-color: #3b82f6;
+}
+.card.green {
+  background-color: #22c55e;
+}
+.card.red {
+  background-color: #ef4444;
+}
+.card.orange {
+  background-color: #f97316;
+}
+
+/* Chart Container */
+.chart-container {
+  width: 100%;
+  max-width: 400px;
+  height: 400px;
+  margin: 0 auto 40px auto;
+}
+.chart-container canvas {
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* Filter & Search Section */
+.filters-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #e5e7eb;
+  border-radius: 8px;
+  align-items: center;
+}
+.filters-container input,
+.filters-container select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  min-width: 150px; /* Minimal lebar untuk input */
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.form input,
+.form select,
+.form button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+.form button {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  transition: 0.3s;
+}
+.form button:hover {
+  background-color: #2563eb;
+}
+/* tombol simpan saat edit */
+.form button.save {
+  background-color: #f97316;
+}
+.form button.save:hover {
+  background-color: #ea580c;
+}
+
+/* tombol delete kecil di form */
+.form button.delete {
+  background-color: #ef4444;
+}
+.form button.delete:hover {
+  background-color: #b91c1c;
+}
+
+/* Tombol Export Excel */
+.export-btn {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  background-color: #22c55e;
+  color: #fff;
+  transition: 0.3s;
+  margin-bottom: 20px;
+}
+.export-btn:hover {
+  background-color: #16a34a;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+table th,
+table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+table th {
+  background-color: #e5e7eb;
+}
+table tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+table button {
+  padding: 4px 8px;
+  margin-right: 4px;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  transition: 0.3s;
+}
+table button:hover {
+  opacity: 0.8;
+}
+table button.delete {
+  background-color: #ef4444;
+}
+table button.edit {
+  background-color: #3b82f6;
+}
+
+/* Report Cards */
+.report-card {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.report-card h3 {
+  margin-bottom: 10px;
+}
+.report-card table {
+  margin-bottom: 10px;
+}
+
+/* Return form (inline pengembalian) */
+.return-form {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.return-form input[type="date"] {
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+  }
+  .sidebar h2 {
+    display: none;
+  }
+  .sidebar ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    gap: 0;
+  }
+  .sidebar ul li {
+    margin-bottom: 0;
+    font-size: 14px;
+    padding: 8px;
+    text-align: center;
+  }
+  .form {
+    flex-direction: column;
+  }
+  .filters-container {
+    flex-direction: column;
+  }
+  .filters-container input,
+  .filters-container select {
+    width: 100%;
+  }
+}
